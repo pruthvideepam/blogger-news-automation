@@ -4,12 +4,12 @@ RSS_FEEDS = [
     {
         "name": "Oneindia Kannada",
         "url": "https://kannada.oneindia.com/rss/feeds/oneindia-kannada-fb.xml",
-        "labels": ["Karnataka"]
+        "labels": ["States", "Karnataka"]
     },
     {
         "name": "News",
         "url": "https://kannada.oneindia.com/rss/feeds/kannada-news-fb.xml",
-        "labels": ["Karnataka"]
+        "labels": ["States", "Karnataka"]
     },
     {
         "name": "Travel",
@@ -24,7 +24,7 @@ RSS_FEEDS = [
     {
         "name": "Dharwad",
         "url": "https://kannada.oneindia.com/rss/feeds/kannada-dharwad-fb.xml",
-        "labels": ["Karnataka","Dharwad"]
+        "labels": ["States", "Karnataka", "Dharwad"]
     },
     {
         "name": "Jobs",
@@ -34,7 +34,7 @@ RSS_FEEDS = [
     {
         "name": "Madikeri",
         "url": "https://kannada.oneindia.com/rss/feeds/kannada-madikeri-fb.xml",
-        "labels": ["Karnataka", "Madikeri"]
+        "labels": ["States", "Karnataka", "Madikeri"]
     },
     {
         "name": "Astrology",
@@ -44,37 +44,37 @@ RSS_FEEDS = [
     {
         "name": "Bidar",
         "url": "https://kannada.oneindia.com/rss/feeds/kannada-bidar-fb.xml",
-        "labels": ["Karnataka","Bidar"]
+        "labels": ["States", "Karnataka", "Bidar"]
     },
     {
         "name": "Bengaluru",
         "url": "https://kannada.oneindia.com/rss/feeds/kannada-bengaluru-fb.xml",
-        "labels": ["Karnataka","Bengaluru"]
+        "labels": ["States", "Karnataka", "Bengaluru"]
     },
     {
         "name": "Mysuru",
         "url": "https://kannada.oneindia.com/rss/feeds/kannada-mysuru-fb.xml",
-        "labels": ["Karnataka", "Mysuru"]
+        "labels": ["States", "Karnataka", "Mysuru"]
     },
     {
         "name": "Mangaluru",
         "url": "https://kannada.oneindia.com/rss/feeds/kannada-mangaluru-fb.xml",
-        "labels": ["Karnataka", "Mangaluru"]
+        "labels": ["States", "Karnataka", "Mangaluru"]
     },
     {
         "name": "Belagavi",
         "url": "https://kannada.oneindia.com/rss/feeds/kannada-belagavi-fb.xml",
-        "labels": ["Karnataka", "Belagavi"]
+        "labels": ["States", "Karnataka", "Belagavi"]
     },
     {
         "name": "Tumakuru",
         "url": "https://kannada.oneindia.com/rss/feeds/kannada-tumakuru-fb.xml",
-        "labels": ["Karnataka", "Tumkur"]
+        "labels": ["States", "Karnataka", "Tumakuru"]
     },
     {
         "name": "Shivamogga",
         "url": "https://kannada.oneindia.com/rss/feeds/kannada-shivamogga-fb.xml",
-        "labels": ["Karnataka", "Tumkur"]
+        "labels": ["States", "Karnataka", "Shivamogga"]
     },
     {
         "name": "Entertainment",
