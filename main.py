@@ -5,6 +5,7 @@ from utils import already_posted, save_posted_link
 import time
 
 SERVICE = None
+MAX_POSTS_PER_RUN = 1
 
 
 def ensure_service():
@@ -36,11 +37,11 @@ def process_feed(feed):
 
     print(f"Checking feed: {feed_name} -> {feed_url}")
 
-    items = get_rss_items(feed_url, limit=8)
+    items = get_rss_items(feed_url, limit=5)
 
     if not items:
         print("  no items")
-        return
+        return False
 
     service = ensure_service()
 
@@ -49,7 +50,6 @@ def process_feed(feed):
             continue
 
         content = make_post_html(item)
-
         final_labels = feed_labels + DEFAULT_LABELS
 
         try:
@@ -64,19 +64,33 @@ def process_feed(feed):
 
             save_posted_link(item["link"])
 
-            print("  Draft created:", item["title"])
+            print("  Post created:", item["title"])
             print("  Labels:", final_labels)
+            print("  URL:", result.get("url"))
 
-            time.sleep(1)
-            break
+            time.sleep(10)
+            return True
 
         except Exception as e:
             print("  Error creating post:", e)
+            time.sleep(20)
+
+    return False
 
 
 def main():
+    posts_created = 0
+
     for feed in RSS_FEEDS:
-        process_feed(feed)
+        if posts_created >= MAX_POSTS_PER_RUN:
+            break
+
+        success = process_feed(feed)
+
+        if success:
+            posts_created += 1
+
+    print(f"Finished. Total posts created this run: {posts_created}")
 
 
 if __name__ == "__main__":
