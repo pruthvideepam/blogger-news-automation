@@ -1,0 +1,8 @@
+beautifulsoup4
+feedparser
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+lxml
+requests
