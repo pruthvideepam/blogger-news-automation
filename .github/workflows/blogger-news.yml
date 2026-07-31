@@ -3,7 +3,7 @@ name: Blogger News Auto Post
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */4 * * *"
+    - cron: "0 */5 * * * *"
 
 permissions:
   contents: write
