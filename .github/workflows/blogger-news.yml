@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: "0 */4 * * *"
 
+permissions:
+  contents: write
+
 jobs:
   run-news-bot:
     runs-on: ubuntu-latest
@@ -12,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -29,3 +34,15 @@ jobs:
           BLOGGER_TOKEN_PICKLE_B64: ${{ secrets.BLOGGER_TOKEN_PICKLE_B64 }}
         run: |
           python main.py
+
+      - name: Commit posted links
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add posted_links.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update posted links"
+            git push
+          fi

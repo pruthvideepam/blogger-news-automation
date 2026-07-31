@@ -50,7 +50,7 @@ def process_feed(feed):
             continue
 
         content = make_post_html(item)
-        final_labels = feed_labels + DEFAULT_LABELS
+        final_labels = list(dict.fromkeys(feed_labels + DEFAULT_LABELS))
 
         try:
             result = create_post(
