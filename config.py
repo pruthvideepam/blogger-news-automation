@@ -1,7 +1,12 @@
 BLOG_ID = "1358510809725283320"
 
 RSS_FEEDS = [
-    {
+{
+        "name": "News 18",
+        "url": "https://kannada.news18.com/commonfeeds/v1/kan/rss/chitradurga.xml",
+        "labels": ["Karnataka, Chitradurga"]
+    },    
+{
         "name": "Oneindia Kannada",
         "url": "https://kannada.oneindia.com/rss/feeds/oneindia-kannada-fb.xml",
         "labels": ["States", "Karnataka"]
