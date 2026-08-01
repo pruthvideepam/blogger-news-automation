@@ -2,6 +2,11 @@ BLOG_ID = "1358510809725283320"
 
 RSS_FEEDS = [    
 {
+        "name": "Prajavani",
+        "url": "https://www.prajavani.net/stories.rss?section=karnataka-news",
+        "labels": ["States", "Karnataka"]
+    },
+{
         "name": "Oneindia Kannada",
         "url": "https://kannada.oneindia.com/rss/feeds/oneindia-kannada-fb.xml",
         "labels": ["States", "Karnataka"]
